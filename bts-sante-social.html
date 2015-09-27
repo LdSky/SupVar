@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+ Miniport 2.0 by HTML5 UP
+-->
+<html>
+    <head>
+        <title>Les établissements publics du Var (BTS Santé et Social)</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="SupVar.fr - Le portail des établissements publics du Var (BTS Santé et Social)" />
+        <meta name="keywords" content="études supérieures, bts, santé, social, var, 83, public" />
+		<meta name="author" content="José GIL" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
+        <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" /> 
+        </noscript>
+        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+        <!--[if IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+
+        <!-- Les styles -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/custom-lppv.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/styleperso.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <div class="wrapper wrapper-style3">
+            <article id="portfolio">
+                <header>
+                    <div id="titreFormation">
+                        <a href="index.html"><img src="http://www.scimitarbookings.co.uk/mobile/images/back_button.png" alt="Bouton de retour à l'accueil" /></a>
+                        <h2>BTS Santé et Social</h2>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="row">
+                        <div id="geoloc" class="12u">
+                            <article id="rechForma" class="box box-style2">
+                                <h4>Recherche par formation</h4>
+                                <p class="description_text">Permet de d'obtenir la liste des établissements du VAR disposant de la formation selectionnée.</p>
+
+                                <a class="coul1" href="javascript:hideshow('btssp3s')">BTS Services et prestations des secteurs sanitaire et social</a><br />
+                                <div id="btssp3s" class="infosEtab"><br />
+                                    <b>Lycée Bonaparte</b><br />Avenue Winston Churchill<br />83000 Toulon<br />Tél: 04.94.18.90.30<br />Site Internet: <a href='http://www.ac-nice.fr/bonaparte/' target='_blank'>http://www.ac-nice.fr/bonaparte/</a><br /><br />
+                                </div>
+
+                                <a class="coul2" href="javascript:hideshow('btsesf')">BTS Économie sociale familiale</a><br />
+                                <div id="btsesf" class="infosEtab"><br />
+                                    <b>Lycée Parc Saint Jean</b><br />Place du 4 Septembre<br />BP 3016<br />83059 Toulon<br />Tél: 04.94.03.93.93<br />Site Internet: <a href='http://www.ac-nice.fr/parcsaintjean/' target='_blank'>http://www.ac-nice.fr/parcsaintjean/</a><br /><br />
+                                </div>
+
+                                <a class="coul3" href="javascript:hideshow('btsabm')">BTS Analyse de biologie médicale</a><br />
+                                <div id="btsabm" class="infosEtab"><br />
+                                    <b>Lycée Costebelle</b><br />150 Boulevard Descroix<br />83408 Hyères<br />Tél: 04.94.57.78.93<br />Site Internet: <a href='http://www.lycee-costebelle.fr' target='_blank'>http://www.lycee-costebelle.fr</a><br /><br />
+                                </div>
+
+                                <a class="coul4" href="javascript:hideshow('btsol')">BTS Opticien lunetier</a><br />
+                                <div id="btsol" class="infosEtab"><br />
+                                    <b>Lycée Val d'Argens</b><br />Quartier Vaugrenier<br />83490 Le Muy<br />Tél: 04.94.17.88.50<br />Site Internet: <a href='http://www.ac-nice.fr/lyc-val-d-argens/' target='_blank'>http://www.ac-nice.fr/lyc-val-d-argens/</a><br /><br />
+                                </div>
+
+                            </article>
+
+                            <article id="rechEtab" class="box box-style2">
+                                <h4>Recherche par établissement</h4>
+                                <p class="description_text">Permet de d'obtenir la liste des formations que propose l'établissement selectionné.</p>
+
+
+                                <div id="map"></div>
+                                <script type="text/javascript">
+                                    // Define your locations: HTML content for the info window, latitude, longitude
+                                    var locations = [
+                                        ['<b>Lycée Bonaparte</b><br />Avenue Winston Churchill<br />83000 Toulon<br />Tél: 04.94.18.90.30<br />Site Internet: <a href="http://www.ac-nice.fr/bonaparte/" target="_blank">http://www.ac-nice.fr/bonaparte/</a>', 43.125764, 5.9265],
+                                        ['<b>Lycée Parc Saint Jean</b><br />Place du 4 Septembre<br />BP 3016<br />83059 Toulon<br />Tél: 04.94.03.93.93<br />Site Internet: <a href="http://www.ac-nice.fr/parcsaintjean/" target="_blank">http://www.ac-nice.fr/parcsaintjean/</a>', 43.123065, 5.953078],
+                                        ['<b>Lycée Costebelle</b><br />150 Boulevard Descroix<br />83408 Hyères<br />Tél: 04.94.57.78.93<br />Site Internet: <a href="http://www.lycee-costebelle.fr" target="_blank">http://www.lycee-costebelle.fr</a>', 43.097524, 6.125114],
+                                        ['<b>Lycée Val d\'Argens</b><br />Quartier Vaugrenier<br />83490 Le Muy<br />Tél: 04.94.17.88.50<br />Site Internet: <a href="http://www.ac-nice.fr/lyc-val-d-argens/" target="_blank">http://www.ac-nice.fr/lyc-val-d-argens/</a><br /><br />', 43.471632, 6.545962]
+                                    ];
+
+                                    // Setup the different icons and shadows
+                                    var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
+
+                                    var icons = [iconURLPrefix + 'red-dot.png'];
+                                    var icons_length = icons.length;
+
+
+                                    var shadow = {
+                                        anchor: new google.maps.Point(15, 33),
+                                        url: iconURLPrefix + 'msmarker.shadow.png'
+                                    };
+
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 10,
+                                        center: new google.maps.LatLng(-37.92, 151.25),
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        mapTypeControl: false,
+                                        streetViewControl: false,
+                                        panControl: false,
+                                        zoomControlOptions: {
+                                            position: google.maps.ControlPosition.LEFT_BOTTOM
+                                        }
+                                    });
+
+                                    var infowindow = new google.maps.InfoWindow({
+                                        maxWidth: 250
+                                    });
+
+                                    var marker;
+                                    var markers = new Array();
+
+                                    var iconCounter = 0;
+
+                                    // Add the markers and infowindows to the map
+                                    for (var i = 0; i < locations.length; i++) {
+                                        marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                            map: map,
+                                            icon: icons[iconCounter],
+                                            shadow: shadow,
+                                            zIndex: i
+                                        });
+
+                                        markers.push(marker);
+
+                                        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                            return function () {
+                                                infowindow.setContent(locations[i][0]);
+                                                infowindow.open(map, marker);
+                                            };
+                                        })(marker, i));
+
+                                        iconCounter++;
+                                        // We only have a limited number of possible icon colors, so we may have to restart the counter
+                                        if (iconCounter >= icons_length) {
+                                            iconCounter = 0;
+                                        }
+                                    }
+
+                                    function AutoCenter() {
+                                        //  Create a new viewpoint bound
+                                        var bounds = new google.maps.LatLngBounds();
+                                        //  Go through each...
+                                        $.each(markers, function (index, marker) {
+                                            bounds.extend(marker.position);
+                                        });
+                                        //  Fit these bounds to the map
+                                        map.fitBounds(bounds);
+                                    }
+                                    AutoCenter();
+                                </script>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <footer id="jgil"><p>Réalisé par <a href="http://www.linkedin.com/pub/antony-bonnardel/5a/261/846" target="_blank">Antony Bonnardel</a>, étudiant en <a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/BTS-Services-informatiques-aux-organisations-option-B-solutions-logicielles-et-applications-metiers" target="_blank">BTS SIO SLAM</a> au <a href="http://www.lyc-bonaparte.fr" target="_blank">Lycée Bonaparte</a><p></footer>
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/bootstrap-transition.js"></script>
+        <script src="assets/js/bootstrap-alert.js"></script>
+        <script src="assets/js/bootstrap-modal.js"></script>
+        <script src="assets/js/bootstrap-dropdown.js"></script>
+        <script src="assets/js/bootstrap-scrollspy.js"></script>
+        <script src="assets/js/bootstrap-tab.js"></script>
+        <script src="assets/js/bootstrap-tooltip.js"></script>
+        <script src="assets/js/bootstrap-popover.js"></script>
+        <script src="assets/js/bootstrap-button.js"></script>
+        <script src="assets/js/bootstrap-collapse.js"></script>
+        <script src="assets/js/bootstrap-carousel.js"></script>
+        <script src="assets/js/bootstrap-typeahead.js"></script>
+        <script src="js/fonctions.js"></script>
+    </body>
+</html>

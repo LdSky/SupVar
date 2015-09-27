@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 nov. 2014, 21:53:59
+    Author     : jgil
+*/
+
+.masthead .muted img {
+    border: 0;
+    width: 509px;
+    height: 95px;
+}
+
+@media screen and (max-width: 509px) {
+    .masthead .muted img {
+        border: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+h4 { color: #000; }
+body {
+    padding-bottom: 40px;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #FFF; /**FF8D40**/
+}
+
+.coul1, .coul2, .coul3, .coul4, .coul5, .coul6, .coul7, .coul8, .coul9, .coul10, .coul11 {
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.coul1 { color: #006AC1; }
+.coul2 { color: #ED7F10; }
+.coul3 { color: #00C13F; }
+.coul4 { color: #9683EC; }
+.coul5 { color: #FF1D77; }
+.coul6 { color: #AA40FF; }
+.coul7 { color: #1FAEFF; }
+.coul8 { color: #91D100; }
+.coul9 { color: #E1B700; }
+.coul10 { color: #FF76BC; }
+.coul11 { color: #FE7C22; }
+
+.infosEtab { display: none; }
+
+#map {
+    width: 500px;
+    height: 580px;
+}
+
+footer.masthead {
+    position: fixed;
+    bottom: 0px;
+    height: 25px;
+    width: 100%;
+}
+
+#titreFormation {
+    width: 395px;
+    margin: 0 auto;
+}
+
+#titreFormation a, #titreFormation h2 {
+    float: left;
+}
+
+#titreFormation a img {
+    margin-top: 15px;
+    margin-right: 25px;
+}
