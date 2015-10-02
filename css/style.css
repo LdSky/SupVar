@@ -84,7 +84,7 @@
 	
 	h1, h2, h3, h4, h5, h6
 	{
-		color: #3e3e3e;
+		color: #FFFFFF;
 	}
 	
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -198,7 +198,7 @@
 	
 	p, ul, ol, dl, table
 	{
-		margin-bottom: 2em;
+		margin-bottom: 0em;
 	}
 	
 	section,
@@ -233,7 +233,7 @@
 	.image-full
 	{
 		display: block;
-		width: 100%;
+		width: 99%;
 		margin: 0 0 2em 0;
 	}
 	
@@ -266,7 +266,7 @@
 		outline: 0;
 		cursor: pointer;
 		border-radius: 8px;
-		text-shadow: -1px -1px 0.5px rgba(0,0,0,0.5);
+		/*text-shadow: -1px -1px 0.5px rgba(0,0,0,0.5);*/
 		overflow: hidden;
 		background: #61b8db;
 		background-image: -moz-linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
@@ -291,7 +291,7 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url('images/bg.png');
+			/*background: url('images/bg.png');*/
 		}
 
 		.button:hover
@@ -418,7 +418,7 @@
 				color: #2E2E2E !important;
 				line-height: 48px;
 				font-size: 24px;
-				text-shadow: 1px 1px 0px rgba(255,255,255,0.1);
+				/*text-shadow: 1px 1px 0px rgba(255,255,255,0.1);*/
 			}
 			
 			ul.social li a span
@@ -428,10 +428,18 @@
 			}
 			
 	.box
-	{
-		background: #fff;
-		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
+	{	
 		text-align: center;
+		
+		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
+		/*degrader circulaire claire centre - sombre bord*/
+		background: -moz-radial-gradient(center, ellipse cover, rgba(193,193,193,0.25) 0%, rgba(0,0,0,0.32) 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(193,193,193,0.25)), color-stop(100%,rgba(0,0,0,0.32))); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(193,193,193,0.25) 0%,rgba(0,0,0,0.32) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover, rgba(193,193,193,0.25) 0%,rgba(0,0,0,0.32) 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover, rgba(193,193,193,0.25) 0%,rgba(0,0,0,0.32) 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center, rgba(193,193,193,0.25) 0%,rgba(0,0,0,0.32) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40c1c1c1', endColorstr='#52000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	}
 
 		.box .image-full
@@ -439,6 +447,14 @@
 			position: relative;
 		}
 
+	.boxsm
+	{
+		text-align: center;		
+	}
+		.box .image-full
+		{
+			position: relative;
+		}
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
@@ -804,7 +820,7 @@
 
 	.wrapper
 	{
-		background-image: url('images/bg.png');
+		/*background-image: url('images/bg.png');*/
 		box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.05), inset 0px 2px 3px 0px rgba(0,0,0,0.1);
 		min-height: 100%;
 		min-width: 1024px;
@@ -813,6 +829,15 @@
 		position: relative;
 		top: 0;
 		left: 0;
+		/* degrader bleu jaune*/
+		background: #ada041; /* Old browsers */
+		background: -moz-linear-gradient(45deg,  #ada041 0%, #13808c 14%, #102b66 77%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ada041), color-stop(14%,#13808c), color-stop(77%,#102b66)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(45deg,  #ada041 0%,#13808c 14%,#102b66 77%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(45deg,  #ada041 0%,#13808c 14%,#102b66 77%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(45deg,  #ada041 0%,#13808c 14%,#102b66 77%); /* IE10+ */
+		background: linear-gradient(45deg,  #ada041 0%,#13808c 14%,#102b66 77%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ada041', endColorstr='#102b66',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	}
 
 	.wrapper-first
@@ -829,20 +854,20 @@
 	.wrapper-style2
 	{
 		background-color: #fafafa;
-		text-shadow: 1px 1px 0px #fff;
+		/*text-shadow: 1px 1px 0px #fff;*/
 	}
 	
 	.wrapper-style3
 	{
 		background-color: #f4f4f4;
-		text-shadow: 1px 1px 0px #fff;
+		/*text-shadow: 1px 1px 0px #fff;*/
 	}
 
 	.wrapper-style4
 	{
 		background-color: #303030;
 		color: #999;
-		text-shadow: -1px -1px 0px #181818;
+		/*text-shadow: -1px -1px 0px #181818;*/
 	}
 
 		.wrapper-style4 h1, 
