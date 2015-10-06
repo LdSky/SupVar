@@ -237,6 +237,10 @@
 		width: 99%;
 		margin: 0 0 2em 0;
 	}
+        
+        .image-full:hover{
+            opacity:0.6;
+        }
 	
 	.image-left
 	{
@@ -452,10 +456,17 @@
 	{
 		text-align: center;		
 	}
-		.box .image-full
-		{
-			position: relative;
-		}
+        .box .image-full
+        {
+		position: relative;
+	}
+        .description_text
+        {
+            font-size: 10px;
+            font-family: Arial,sans-serif;
+            text-align: justify;
+            color: white;
+        }
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
