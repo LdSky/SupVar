@@ -76,10 +76,11 @@
 			border: 0;
 		}
 
-	strong, b
+	strong, b, .titreLycee
 	{
 		font-weight: 600;
 		color: #3e3e3e;
+                text-decoration:none;
 	}
 	
 	h1, h2, h3, h4, h5, h6
