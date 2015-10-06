@@ -59,12 +59,12 @@
                                 <h4>Recherche par formation</h4>
                                 <p class="description_text">Permet de d'obtenir la liste des établissements du VAR disposant de la formation selectionnée.</p>
 
-                                <a class="coul1" href="javascript:hideshow('btshr')">BTS Hôtellerie-Restauration</a><br />
+                                <a class="coul1" href="javascript:hideshow('btshr');zoomMarker(0);">BTS Hôtellerie-Restauration</a><br />
                                 <div id="btshr" class="infosEtab"><br />
                                     <b>Lycée Anne-Sophie Pic (Hôtellerie et Tourisme)</b><br />Rue César Vezzani<br />83000 Toulon<br />Tél: 04.94.09.70.84<br />Site Internet: <a href='http://lycee-hotelier-toulon.com/' target='_blank'>http://lycee-hotelier-toulon.com/</a><br /><br />
                                 </div>
 
-                                <a class="coul2" href="javascript:hideshow('btst')">BTS Tourisme</a><br />
+                                <a class="coul2" href="javascript:hideshow('btst');zoomMarker(0);">BTS Tourisme</a><br />
                                 <div id="btst" class="infosEtab"><br />
                                     <b>Lycée Anne-Sophie Pic (Hôtellerie et Tourisme)</b><br />Rue César Vezzani<br />83000 Toulon<br />Tél: 04.94.09.70.84<br />Site Internet: <a href='http://lycee-hotelier-toulon.com/' target='_blank'>http://lycee-hotelier-toulon.com/</a><br /><br />
                                 </div>
@@ -141,7 +141,11 @@
                                             iconCounter = 0;
                                         }
                                     }
-
+                                    function zoomMarker(id){
+                                            google.maps.event.trigger(markers[id], "click");
+                                            map.setCenter(markers[id].position);
+                                            map.setZoom(15);
+                                    }
                                     function AutoCenter() {
                                         //  Create a new viewpoint bound
                                         var bounds = new google.maps.LatLngBounds();

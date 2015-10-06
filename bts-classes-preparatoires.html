@@ -58,27 +58,27 @@
                             <article id="rechForma" class="box box-style2">
                                 <h4>Recherche par formation</h4>
                                 <p class="description_text">Permet de d'obtenir la liste des établissements du VAR disposant de la formation selectionnée.</p>
-                                <a class="coul1" href="javascript:hideshow('ptsi')">Physique, technologie et sciences de l'ingénieur</a><br />
+                                <a class="coul1" href="javascript:hideshow('ptsi');zoomMarker(0);">Physique, technologie et sciences de l'ingénieur</a><br />
                                 <div id="ptsi" class="infosEtab"><br />
                                     <b>Lycée Rouvière</b><br />Rue Sainte Claire Deville<br />Quartier Sainte Musse<br />BP 1205<br />83070 Toulon Cedex<br />Tél: 04.94.27.39.44<br />Site Internet: <a href='http://www.lycee-rouviere.fr/' target='_blank'>http://www.lycee-rouviere.fr/</a><br /><br />
                                 </div>
-                                <a class="coul2" href="javascript:hideshow('tsi')">Technologie et sciences industrielles</a><br />
+                                <a class="coul2" href="javascript:hideshow('tsi');zoomMarker(0);">Technologie et sciences industrielles</a><br />
                                 <div id="tsi" class="infosEtab"><br />
                                     <b>Lycée Rouvière</b><br />Rue Sainte Claire Deville<br />Quartier Sainte Musse<br />BP 1205<br />83070 Toulon Cedex<br />Tél: 04.94.27.39.44<br />Site Internet: <a href='http://www.lycee-rouviere.fr/' target='_blank'>http://www.lycee-rouviere.fr/</a><br /><br />
                                 </div>
-                                <a class="coul3" href="javascript:hideshow('ec')">Économique et commerciale (option économique et option scientifique)</a><br />
+                                <a class="coul3" href="javascript:hideshow('ec');zoomMarker(1);">Économique et commerciale (option économique et option scientifique)</a><br />
                                 <div id="ec" class="infosEtab"><br />
                                     <b>Lycée Dumont D'Urville</b><br />212 Rue Amiral Jaujard<br />83056 Toulon<br />Tél: 04.98.00.15.15<br />Site Internet: <a href='http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/' target='_blank'>http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/</a><br /><br />
                                 </div>
-                                <a class="coul4" href="javascript:hideshow('la')">Littéraire et artistique</a><br />
+                                <a class="coul4" href="javascript:hideshow('la');zoomMarker(1);">Littéraire et artistique</a><br />
                                 <div id="la" class="infosEtab"><br />
                                     <b>Lycée Dumont D'Urville</b><br />212 Rue Amiral Jaujard<br />83056 Toulon<br />Tél: 04.98.00.15.15<br />Site Internet: <a href='http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/' target='_blank'>http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/</a><br /><br />
                                 </div>
-                                <a class="coul5" href="javascript:hideshow('mpsi')">Mathématiques, physique et sciences de l'ingénieur</a><br />
+                                <a class="coul5" href="javascript:hideshow('mpsi');zoomMarker(1);">Mathématiques, physique et sciences de l'ingénieur</a><br />
                                 <div id="mpsi" class="infosEtab"><br />
                                     <b>Lycée Dumont D'Urville</b><br />212 Rue Amiral Jaujard<br />83056 Toulon<br />Tél: 04.98.00.15.15<br />Site Internet: <a href='http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/' target='_blank'>http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/</a><br /><br />
                                 </div>
-                                <a class="coul6" href="javascript:hideshow('pcsi')">Physique-chimie et sciences de l'ingénieur</a><br />
+                                <a class="coul6" href="javascript:hideshow('pcsi');zoomMarker(1);">Physique-chimie et sciences de l'ingénieur</a><br />
                                 <div id="pcsi" class="infosEtab"><br />
                                     <b>Lycée Dumont D'Urville</b><br />212 Rue Amiral Jaujard<br />83056 Toulon<br />Tél: 04.98.00.15.15<br />Site Internet: <a href='http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/' target='_blank'>http://eole.lyc-dumont-d-urville.ac-nice.fr/dumont/</a><br /><br />
                                 </div>
@@ -153,7 +153,11 @@
                                             iconCounter = 0;
                                         }
                                     }
-
+                                    function zoomMarker(id){
+                                            google.maps.event.trigger(markers[id], "click");
+                                            map.setCenter(markers[id].position);
+                                            map.setZoom(15);
+                                    }
                                     function AutoCenter() {
                                         //  Create a new viewpoint bound
                                         var bounds = new google.maps.LatLngBounds();
