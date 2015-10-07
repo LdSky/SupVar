@@ -68,7 +68,7 @@
 	
 		a:hover
 		{
-			color: #1B75A6 !important;
+			color: #51B3E4 !important;
 		}
 
 		a img
@@ -79,7 +79,7 @@
 	strong, b, .titreLycee
 	{
 		font-weight: 600;
-		color: #3e3e3e;
+		color: white;
                 text-decoration:none;
 	}
 	

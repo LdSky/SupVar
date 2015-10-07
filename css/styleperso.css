@@ -30,7 +30,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 20px;
-    color: #333333;
+    color: #66B0E1;
     background-color: #FFF; /**FF8D40**/
 }
 
@@ -40,7 +40,7 @@ body {
     font-weight: bold;
 }
 
-.coul1 { color: #006AC1; }
+.coul1 { color: #1992F5; }
 .coul2 { color: #ED7F10; }
 .coul3 { color: #00C13F; }
 .coul4 { color: #9683EC; }
